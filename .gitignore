@@ -1,6 +1,6 @@
 # Competitor HTML files (kept locally for reference)
 *.html
-!updated_NetworkChuck_Landing_Page.html
+!index.html
 
 # macOS files
 .DS_Store
