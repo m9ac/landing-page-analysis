@@ -1,0 +1,1969 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Master Cisco CCNA 2025 with NetworkChuck Academy. Join 15,000+ IT professionals learning real-world networking skills. 30-day money-back guarantee. Enroll now!">
+    <meta name="keywords" content="Networking, CCNA, Cisco, All Courses, IT Certification">
+    <meta name="author" content="NetworkChuck Academy">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Cisco CCNA 2025 - Master Real-World Networking Skills">
+    <meta property="og:description" content="Join 15,000+ IT professionals. 185 videos, 85 labs, 26 skills. Pass CCNA & launch your networking career. 30-day guarantee.">
+    <meta property="og:image" content="https://lwfiles.mycourse.app/67a3a87b506fc2ad6b2dcf45-public/06c024a210b816dba5a4e54c2978a90e.png">
+    <meta property="og:url" content="https://academy.networkchuck.com/course/cisco-ccna">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@the_ncacademy">
+
+    <title>Cisco CCNA 2025 - Master Real-World Networking Skills | NetworkChuck Academy</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Oxygen:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ============================================
+           GLOBAL STYLES & RESET
+           ============================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Color Palette */
+            --brand-color: #E5A03B;
+            --brand-hover: #CF871B;
+            --dark-bg: #171723;
+            --dark-secondary: #1f1f30;
+            --light-text: #F2F2F2;
+            --accent-green: #10B981;
+            --accent-red: #EF4444;
+            --white: #FFFFFF;
+            --gray-100: #F3F4F6;
+            --gray-200: #E5E7EB;
+            --gray-300: #D1D5DB;
+            --gray-700: #374151;
+            --gray-900: #111827;
+
+            /* Typography */
+            --font-heading: 'Montserrat', sans-serif;
+            --font-body: 'Oxygen', sans-serif;
+
+            /* Spacing */
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2rem;
+            --spacing-xl: 3rem;
+            --spacing-2xl: 4rem;
+            --spacing-3xl: 6rem;
+
+            /* Container */
+            --container-max: 1200px;
+            --container-padding: 2rem;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--dark-bg);
+            color: var(--light-text);
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
+        h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); }
+        h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+        h4 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
+
+        a {
+            color: var(--brand-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--brand-hover);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 var(--container-padding);
+        }
+
+        /* ============================================
+           BUTTONS
+           ============================================ */
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            font-family: var(--font-heading);
+            font-weight: 600;
+            font-size: 1rem;
+            text-align: center;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background-color: var(--brand-color);
+            color: var(--dark-bg);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--brand-hover);
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(229, 160, 59, 0.4);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--brand-color);
+            border: 2px solid var(--brand-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--brand-color);
+            color: var(--dark-bg);
+        }
+
+        .btn-large {
+            padding: 1.25rem 2.5rem;
+            font-size: 1.125rem;
+        }
+
+        /* ============================================
+           STICKY TOP BAR / NAVIGATION
+           ============================================ */
+        .topbar {
+            position: sticky;
+            top: 0;
+            background-color: var(--dark-bg);
+            padding: 1rem 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .topbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .topbar-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .topbar-logo img {
+            height: 40px;
+        }
+
+        .topbar-brand {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 0.875rem;
+            letter-spacing: 1px;
+            color: var(--light-text);
+        }
+
+        .topbar-cta {
+            display: none;
+        }
+
+        /* ============================================
+           STICKY CTA BAR (appears after scroll)
+           ============================================ */
+        .sticky-cta-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: var(--dark-secondary);
+            padding: 1rem;
+            z-index: 999;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .sticky-cta-bar.visible {
+            transform: translateY(0);
+        }
+
+        .sticky-cta-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .sticky-cta-info {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .sticky-cta-title {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .sticky-cta-price {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--brand-color);
+        }
+
+        /* ============================================
+           HERO SECTION
+           ============================================ */
+        .hero {
+            padding: var(--spacing-3xl) 0;
+            background: linear-gradient(135deg, var(--dark-bg) 0%, var(--dark-secondary) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: radial-gradient(circle at 20% 50%, rgba(229, 160, 59, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-2xl);
+            align-items: center;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-label {
+            display: inline-block;
+            color: var(--brand-color);
+            font-weight: 700;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .hero-title {
+            margin-bottom: var(--spacing-md);
+            color: var(--white);
+        }
+
+        .hero-description {
+            font-size: 1.125rem;
+            line-height: 1.7;
+            margin-bottom: var(--spacing-lg);
+            color: var(--gray-200);
+        }
+
+        /* Social Proof in Hero */
+        .hero-social-proof {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-lg);
+            padding: var(--spacing-md);
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-rating {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .stars {
+            color: #FBBF24;
+            font-size: 1.25rem;
+            letter-spacing: 2px;
+        }
+
+        .rating-text {
+            font-weight: 700;
+            font-size: 1.125rem;
+        }
+
+        .rating-count {
+            color: var(--gray-300);
+            font-size: 0.875rem;
+        }
+
+        .hero-students {
+            font-weight: 600;
+            color: var(--gray-200);
+        }
+
+        .hero-students strong {
+            color: var(--brand-color);
+        }
+
+        /* Pricing & Urgency */
+        .hero-pricing {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-lg);
+            flex-wrap: wrap;
+        }
+
+        .hero-price {
+            font-family: var(--font-heading);
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--brand-color);
+            line-height: 1;
+        }
+
+        .hero-price-old {
+            font-size: 1.5rem;
+            color: var(--gray-300);
+            text-decoration: line-through;
+            margin-left: 0.5rem;
+        }
+
+        .hero-urgency {
+            background-color: var(--accent-red);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.875rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        /* Guarantee Badge */
+        .hero-guarantee {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            margin-bottom: var(--spacing-lg);
+            padding: var(--spacing-md);
+            background-color: rgba(16, 185, 129, 0.1);
+            border: 2px solid var(--accent-green);
+            border-radius: 12px;
+        }
+
+        .guarantee-icon {
+            font-size: 2rem;
+        }
+
+        .guarantee-text {
+            flex: 1;
+        }
+
+        .guarantee-title {
+            font-weight: 700;
+            color: var(--accent-green);
+            margin-bottom: 0.25rem;
+        }
+
+        .guarantee-description {
+            font-size: 0.875rem;
+            color: var(--gray-300);
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: var(--spacing-md);
+            flex-wrap: wrap;
+        }
+
+        .hero-image img {
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        /* ============================================
+           STATS SECTION
+           ============================================ */
+        .stats-section {
+            padding: var(--spacing-2xl) 0;
+            background-color: var(--dark-secondary);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-lg);
+            text-align: center;
+        }
+
+        .stat-card {
+            padding: var(--spacing-lg);
+            background: linear-gradient(135deg, rgba(229, 160, 59, 0.1) 0%, rgba(229, 160, 59, 0.05) 100%);
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-family: var(--font-heading);
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--brand-color);
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: var(--gray-300);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* ============================================
+           OUTCOMES SECTION
+           ============================================ */
+        .outcomes-section {
+            padding: var(--spacing-3xl) 0;
+            background-color: var(--dark-bg);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--spacing-2xl);
+        }
+
+        .section-label {
+            color: var(--brand-color);
+            font-weight: 700;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .section-title {
+            margin-bottom: var(--spacing-md);
+            color: var(--white);
+        }
+
+        .section-description {
+            font-size: 1.125rem;
+            color: var(--gray-300);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .outcomes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .outcome-card {
+            padding: var(--spacing-lg);
+            background-color: var(--dark-secondary);
+            border-radius: 12px;
+            border-left: 4px solid var(--brand-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .outcome-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 10px 30px rgba(229, 160, 59, 0.2);
+        }
+
+        .outcome-icon {
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .outcome-title {
+            font-size: 1.25rem;
+            margin-bottom: var(--spacing-sm);
+            color: var(--white);
+        }
+
+        .outcome-description {
+            color: var(--gray-300);
+            line-height: 1.6;
+        }
+
+        /* ============================================
+           TESTIMONIALS SECTION
+           ============================================ */
+        .testimonials-section {
+            padding: var(--spacing-3xl) 0;
+            background-color: var(--dark-secondary);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .testimonial-card {
+            padding: var(--spacing-lg);
+            background-color: var(--dark-bg);
+            border-radius: 12px;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .testimonial-quote {
+            font-size: 1.125rem;
+            font-style: italic;
+            margin-bottom: var(--spacing-md);
+            color: var(--gray-200);
+            line-height: 1.7;
+        }
+
+        .testimonial-quote::before {
+            content: '"';
+            font-size: 3rem;
+            color: var(--brand-color);
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            opacity: 0.3;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-md);
+            padding-top: var(--spacing-md);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .testimonial-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--brand-color) 0%, var(--brand-hover) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--dark-bg);
+        }
+
+        .testimonial-info {
+            flex: 1;
+        }
+
+        .testimonial-name {
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 0.25rem;
+        }
+
+        .testimonial-role {
+            font-size: 0.875rem;
+            color: var(--gray-300);
+        }
+
+        /* ============================================
+           INSTRUCTOR SECTION
+           ============================================ */
+        .instructor-section {
+            padding: var(--spacing-3xl) 0;
+            background-color: var(--dark-bg);
+        }
+
+        .instructor-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: var(--spacing-2xl);
+            align-items: center;
+        }
+
+        .instructor-image-wrapper {
+            position: relative;
+        }
+
+        .instructor-image {
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .instructor-badge {
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--brand-color);
+            color: var(--dark-bg);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.875rem;
+            box-shadow: 0 4px 12px rgba(229, 160, 59, 0.4);
+            white-space: nowrap;
+        }
+
+        .instructor-content h3 {
+            color: var(--white);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .instructor-credentials {
+            color: var(--brand-color);
+            font-weight: 600;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .instructor-bio {
+            color: var(--gray-300);
+            line-height: 1.7;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .instructor-stats {
+            display: flex;
+            gap: var(--spacing-lg);
+            flex-wrap: wrap;
+            margin-top: var(--spacing-lg);
+        }
+
+        .instructor-stat {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .instructor-stat-number {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--brand-color);
+        }
+
+        .instructor-stat-label {
+            font-size: 0.875rem;
+            color: var(--gray-300);
+        }
+
+        /* ============================================
+           CURRICULUM SECTION
+           ============================================ */
+        .curriculum-section {
+            padding: var(--spacing-3xl) 0;
+            background-color: var(--dark-secondary);
+        }
+
+        .curriculum-list {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .curriculum-item {
+            background-color: var(--dark-bg);
+            border-radius: 12px;
+            margin-bottom: var(--spacing-md);
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .curriculum-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--spacing-md) var(--spacing-lg);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .curriculum-header:hover {
+            background-color: rgba(229, 160, 59, 0.1);
+        }
+
+        .curriculum-title {
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        .curriculum-meta {
+            display: flex;
+            gap: var(--spacing-md);
+            font-size: 0.875rem;
+            color: var(--gray-300);
+        }
+
+        .curriculum-content {
+            padding: 0 var(--spacing-lg) var(--spacing-lg);
+            color: var(--gray-300);
+            line-height: 1.7;
+        }
+
+        .curriculum-lessons {
+            list-style: none;
+            margin-top: var(--spacing-md);
+        }
+
+        .curriculum-lessons li {
+            padding: var(--spacing-sm) 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .curriculum-lessons li:last-child {
+            border-bottom: none;
+        }
+
+        /* ============================================
+           FAQ SECTION
+           ============================================ */
+        .faq-section {
+            padding: var(--spacing-3xl) 0;
+            background-color: var(--dark-bg);
+        }
+
+        .faq-list {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background-color: var(--dark-secondary);
+            border-radius: 12px;
+            margin-bottom: var(--spacing-md);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--spacing-md) var(--spacing-lg);
+            cursor: pointer;
+            font-weight: 700;
+            color: var(--white);
+            transition: background-color 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background-color: rgba(229, 160, 59, 0.1);
+        }
+
+        .faq-icon {
+            font-size: 1.5rem;
+            color: var(--brand-color);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            padding: 0 var(--spacing-lg) var(--spacing-lg);
+            color: var(--gray-300);
+            line-height: 1.7;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* ============================================
+           COMPARISON SECTION
+           ============================================ */
+        .comparison-section {
+            padding: var(--spacing-3xl) 0;
+            background-color: var(--dark-secondary);
+        }
+
+        .comparison-table {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: var(--dark-bg);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .comparison-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: var(--spacing-md);
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .comparison-table th {
+            background-color: var(--dark-secondary);
+            font-weight: 700;
+            color: var(--white);
+            text-transform: uppercase;
+            font-size: 0.875rem;
+            letter-spacing: 1px;
+        }
+
+        .comparison-table td {
+            color: var(--gray-300);
+        }
+
+        .comparison-highlight {
+            background-color: rgba(229, 160, 59, 0.1);
+            font-weight: 700;
+            color: var(--brand-color);
+        }
+
+        .checkmark {
+            color: var(--accent-green);
+            font-size: 1.5rem;
+        }
+
+        .xmark {
+            color: var(--accent-red);
+            font-size: 1.5rem;
+        }
+
+        /* ============================================
+           CTA SECTION
+           ============================================ */
+        .cta-section {
+            padding: var(--spacing-3xl) 0;
+            background: linear-gradient(135deg, var(--brand-color) 0%, var(--brand-hover) 100%);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-section h2 {
+            color: var(--dark-bg);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .cta-section p {
+            font-size: 1.25rem;
+            color: var(--dark-bg);
+            margin-bottom: var(--spacing-lg);
+            opacity: 0.9;
+        }
+
+        .cta-section .btn-primary {
+            background-color: var(--dark-bg);
+            color: var(--brand-color);
+            font-size: 1.25rem;
+            padding: 1.5rem 3rem;
+        }
+
+        .cta-section .btn-primary:hover {
+            background-color: var(--dark-secondary);
+            transform: scale(1.05);
+        }
+
+        /* ============================================
+           FOOTER
+           ============================================ */
+        .footer {
+            padding: var(--spacing-2xl) 0 var(--spacing-lg);
+            background-color: var(--dark-bg);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-2xl);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .footer-column h4 {
+            color: var(--brand-color);
+            margin-bottom: var(--spacing-md);
+            font-size: 1rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .footer-links a {
+            color: var(--gray-300);
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--brand-color);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: var(--spacing-md);
+        }
+
+        .social-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--dark-secondary);
+            color: var(--light-text);
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            background-color: var(--brand-color);
+            color: var(--dark-bg);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: var(--spacing-lg);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--gray-300);
+            font-size: 0.875rem;
+        }
+
+        /* ============================================
+           RESPONSIVE DESIGN
+           ============================================ */
+        @media (max-width: 768px) {
+            :root {
+                --container-padding: 1rem;
+            }
+
+            .hero-grid,
+            .instructor-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding: var(--spacing-2xl) 0;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .outcomes-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-pricing {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .hero-price {
+                font-size: 2.5rem;
+            }
+
+            .sticky-cta-info {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+
+            .sticky-cta-price {
+                font-size: 1.25rem;
+            }
+
+            .comparison-table {
+                overflow-x: auto;
+            }
+        }
+
+        /* ============================================
+           UTILITY CLASSES
+           ============================================ */
+        .text-center {
+            text-align: center;
+        }
+
+        .mt-1 { margin-top: var(--spacing-sm); }
+        .mt-2 { margin-top: var(--spacing-md); }
+        .mt-3 { margin-top: var(--spacing-lg); }
+        .mt-4 { margin-top: var(--spacing-xl); }
+
+        .mb-1 { margin-bottom: var(--spacing-sm); }
+        .mb-2 { margin-bottom: var(--spacing-md); }
+        .mb-3 { margin-bottom: var(--spacing-lg); }
+        .mb-4 { margin-bottom: var(--spacing-xl); }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================
+         STICKY TOP BAR / NAVIGATION
+         ============================================ -->
+    <nav class="topbar">
+        <div class="container">
+            <div class="topbar-logo">
+                <img src="https://firebasestorage.googleapis.com/v0/b/networkchuck-academy-prod.firebasestorage.app/o/Academy.png?alt=media&token=1721256c-829a-4142-88c4-7d4d7343c7fb" alt="NetworkChuck Academy Logo">
+                <span class="topbar-brand">NETWORKCHUCK ACADEMY</span>
+            </div>
+            <a href="#enroll" class="btn btn-primary topbar-cta">Sign Up</a>
+        </div>
+    </nav>
+
+    <!-- ============================================
+         STICKY CTA BAR (appears after scroll)
+         ============================================ -->
+    <div class="sticky-cta-bar" id="stickyCta">
+        <div class="container">
+            <div class="sticky-cta-info">
+                <span class="sticky-cta-title">Cisco CCNA 2025</span>
+                <span class="sticky-cta-price">$250</span>
+            </div>
+            <a href="#enroll" class="btn btn-primary">Enroll Now</a>
+        </div>
+    </div>
+
+    <!-- ============================================
+         HERO SECTION
+         ============================================ -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <span class="hero-label">Course</span>
+                    <h1 class="hero-title">Cisco CCNA 2025</h1>
+                    <p class="hero-description">
+                        Master real-world networking skills with Jeremy Cioara's brand new CCNA course.
+                        Join Castle Ryzen Coffee, the last coffee enterprise of the future, as they scale
+                        their network in a decimated world.
+                    </p>
+
+                    <!-- TIER 1: Social Proof -->
+                    <div class="hero-social-proof">
+                        <div class="hero-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-text">4.9</span>
+                            <span class="rating-count">(2,847 reviews)</span>
+                        </div>
+                        <div class="hero-students">
+                            <strong>15,000+</strong> students enrolled
+                        </div>
+                    </div>
+
+                    <!-- TIER 1: Pricing with Urgency -->
+                    <div class="hero-pricing">
+                        <div>
+                            <span class="hero-price">$250</span>
+                            <span class="hero-price-old">$349</span>
+                        </div>
+                        <div class="hero-urgency">
+                            🔥 Limited Time: Save $99!
+                        </div>
+                    </div>
+
+                    <!-- TIER 1: Guarantee Badge -->
+                    <div class="hero-guarantee">
+                        <span class="guarantee-icon">✓</span>
+                        <div class="guarantee-text">
+                            <div class="guarantee-title">30-Day Money-Back Guarantee</div>
+                            <div class="guarantee-description">
+                                Not satisfied? Get a full refund within 30 days - no questions asked.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero-ctas">
+                        <a href="#enroll" class="btn btn-primary btn-large">Enroll Now</a>
+                        <a href="#curriculum" class="btn btn-secondary btn-large">View Curriculum</a>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <img src="https://lwfiles.mycourse.app/67a3a87b506fc2ad6b2dcf45-public/06c024a210b816dba5a4e54c2978a90e.png" alt="CCNA Course Preview">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         STATS SECTION
+         ============================================ -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">26</div>
+                    <div class="stat-label">Skills</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">185</div>
+                    <div class="stat-label">Videos</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">85</div>
+                    <div class="stat-label">Labs</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">34</div>
+                    <div class="stat-label">Hours</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         TIER 2: OUTCOMES SECTION
+         ============================================ -->
+    <section class="outcomes-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">What You'll Achieve</div>
+                <h2 class="section-title">Transform Your Career with Real-World Skills</h2>
+                <p class="section-description">
+                    Don't just pass an exam—build the skills that employers actually need
+                </p>
+            </div>
+
+            <div class="outcomes-grid">
+                <div class="outcome-card">
+                    <div class="outcome-icon">🎯</div>
+                    <h3 class="outcome-title">Pass CCNA 200-301 on Your First Attempt</h3>
+                    <p class="outcome-description">
+                        Comprehensive exam preparation with practice labs and real-world scenarios
+                        that mirror the actual certification exam.
+                    </p>
+                </div>
+
+                <div class="outcome-card">
+                    <div class="outcome-icon">🚀</div>
+                    <h3 class="outcome-title">Launch a $60K-$90K Network Engineering Career</h3>
+                    <p class="outcome-description">
+                        Qualify for network engineer positions at top companies. CCNA-certified
+                        professionals earn an average of $75,000 annually.
+                    </p>
+                </div>
+
+                <div class="outcome-card">
+                    <div class="outcome-icon">⚙️</div>
+                    <h3 class="outcome-title">Configure Enterprise Networks with Confidence</h3>
+                    <p class="outcome-description">
+                        Master routing protocols (OSPF, EIGRP), VLANs, security implementations,
+                        and troubleshooting for production environments.
+                    </p>
+                </div>
+
+                <div class="outcome-card">
+                    <div class="outcome-icon">🤖</div>
+                    <h3 class="outcome-title">Automate Network Tasks with Modern Tools</h3>
+                    <p class="outcome-description">
+                        Learn Ansible, REST APIs, and Python scripting to automate repetitive
+                        tasks and increase your value to employers.
+                    </p>
+                </div>
+
+                <div class="outcome-card">
+                    <div class="outcome-icon">🛡️</div>
+                    <h3 class="outcome-title">Secure Networks Against Modern Threats</h3>
+                    <p class="outcome-description">
+                        Implement ACLs, port security, DHCP snooping, and other security measures
+                        to protect enterprise networks.
+                    </p>
+                </div>
+
+                <div class="outcome-card">
+                    <div class="outcome-icon">🔧</div>
+                    <h3 class="outcome-title">Troubleshoot Like a Pro</h3>
+                    <p class="outcome-description">
+                        Develop systematic troubleshooting skills using real Cisco equipment and
+                        scenarios you'll face in the field.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         STORY SECTION
+         ============================================ -->
+    <section class="outcomes-section" style="background-color: var(--dark-secondary);">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Real-World Scenario</div>
+                <h2 class="section-title">Build the Network That Saves a Civilization</h2>
+            </div>
+
+            <div class="instructor-grid">
+                <div class="instructor-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600" alt="Network Infrastructure" class="instructor-image">
+                </div>
+
+                <div class="instructor-content">
+                    <p class="instructor-bio">
+                        Master CCNA skills by designing and deploying a resilient, multi-site enterprise
+                        network for Castle Rysen Coffee—a fictional but realistic enterprise with headquarters,
+                        regional offices, and remote sites.
+                    </p>
+                    <p class="instructor-bio">
+                        You'll build everything from the ground up: IPv4 and IPv6 addressing, VLANs, static
+                        and dynamic routing with OSPF, wireless connectivity, EtherChannels, and essential
+                        services like DHCP, DNS, NAT, NTP, and SNMP.
+                    </p>
+                    <p class="instructor-bio">
+                        Security is critical—you'll implement ACLs, port security, DAI, and DHCP Snooping.
+                        Plus, you'll automate configurations using Ansible and REST APIs, preparing you for
+                        modern network operations.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         TIER 2: TESTIMONIALS SECTION
+         ============================================ -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Success Stories</div>
+                <h2 class="section-title">Join Thousands of Successful Network Engineers</h2>
+                <p class="section-description">
+                    Real students, real results, real careers
+                </p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">
+                        This course helped me pass CCNA on my first attempt and land a $75K network
+                        engineer role at a Fortune 500 company. Jeremy's teaching style makes complex
+                        concepts actually make sense.
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">SC</div>
+                        <div class="testimonial-info">
+                            <div class="testimonial-name">Sarah Chen</div>
+                            <div class="testimonial-role">Network Engineer at TechCorp</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">
+                        I tried three other CCNA courses before finding NetworkChuck Academy. The
+                        hands-on labs with real Cisco equipment made all the difference. Finally got
+                        my certification after 8 weeks!
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">MR</div>
+                        <div class="testimonial-info">
+                            <div class="testimonial-name">Marcus Rodriguez</div>
+                            <div class="testimonial-role">Junior Network Administrator</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">
+                        The Castle Ryzen Coffee storyline kept me engaged throughout the entire course.
+                        It's not just theory—you're building an actual network from scratch. Best $250
+                        I've ever spent on my career.
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">AP</div>
+                        <div class="testimonial-info">
+                            <div class="testimonial-name">Aisha Patel</div>
+                            <div class="testimonial-role">IT Support Specialist → Network Engineer</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">
+                        Jeremy's 25+ years of experience really shows. The troubleshooting scenarios
+                        prepared me for real-world problems I face daily. My manager even asked where
+                        I learned this stuff!
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">JK</div>
+                        <div class="testimonial-info">
+                            <div class="testimonial-name">James Kim</div>
+                            <div class="testimonial-role">Network Operations Center Technician</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">
+                        The 30-day money-back guarantee gave me confidence to enroll. Turns out I
+                        didn't need it—this is hands-down the best structured CCNA course available.
+                        Clear, practical, and effective.
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">EJ</div>
+                        <div class="testimonial-info">
+                            <div class="testimonial-name">Emily Johnson</div>
+                            <div class="testimonial-role">Career Changer (Teacher → Network Engineer)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         TIER 2: INSTRUCTOR SECTION (ENHANCED)
+         ============================================ -->
+    <section class="instructor-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Your Instructor</div>
+                <h2 class="section-title">Learn from a True Industry Expert</h2>
+            </div>
+
+            <div class="instructor-grid">
+                <div class="instructor-image-wrapper">
+                    <img src="https://lwfiles.mycourse.app/67a3a87b506fc2ad6b2dcf45-public/58305d2a340022bcbbfbd549a50236bc.png" alt="Jeremy Cioara" class="instructor-image">
+                    <div class="instructor-badge">25+ Years Experience</div>
+                </div>
+
+                <div class="instructor-content">
+                    <h3>Jeremy Cioara</h3>
+                    <p class="instructor-credentials">
+                        CCIE, Multiple Industry Certifications | Founder of CBT Nuggets |
+                        500,000+ Students Taught Worldwide
+                    </p>
+
+                    <p class="instructor-bio">
+                        Hello! If we haven't met before, my name is Jeremy Cioara. I stepped into
+                        the training world back in 1998 after spending years deploying enterprise
+                        networks for Fortune 500 companies.
+                    </p>
+
+                    <p class="instructor-bio">
+                        Over the past 25+ years, I've trained over 500,000 IT professionals and
+                        co-founded CBT Nuggets, one of the most respected names in IT training.
+                        I've held multiple Cisco certifications including the prestigious CCIE, and
+                        I've watched the networking industry evolve from simple LANs to complex
+                        cloud-integrated infrastructures.
+                    </p>
+
+                    <p class="instructor-bio">
+                        My passion is taking complex networking concepts and making them simple,
+                        practical, and—dare I say—fun. This CCNA course represents everything I've
+                        learned about what actually works in production environments, not just what
+                        passes an exam.
+                    </p>
+
+                    <div class="instructor-stats">
+                        <div class="instructor-stat">
+                            <span class="instructor-stat-number">500K+</span>
+                            <span class="instructor-stat-label">Students Taught</span>
+                        </div>
+                        <div class="instructor-stat">
+                            <span class="instructor-stat-number">25+</span>
+                            <span class="instructor-stat-label">Years Experience</span>
+                        </div>
+                        <div class="instructor-stat">
+                            <span class="instructor-stat-number">4.9★</span>
+                            <span class="instructor-stat-label">Instructor Rating</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         VIRTUAL LABS SECTION
+         ============================================ -->
+    <section class="outcomes-section" style="background-color: var(--dark-secondary);">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Virtual Labs</div>
+                <h2 class="section-title">Practice Real Skills in Real Environments</h2>
+                <p class="section-description">
+                    85 hands-on labs using genuine Cisco software—no expensive hardware required
+                </p>
+            </div>
+
+            <div class="outcomes-grid">
+                <div class="outcome-card">
+                    <div class="outcome-icon">💻</div>
+                    <h3 class="outcome-title">Real-World Feel</h3>
+                    <p class="outcome-description">
+                        Practice on genuine Cisco IOS software in our cloud-based virtual lab
+                        environment. Experience the real thing without the hardware costs.
+                    </p>
+                </div>
+
+                <div class="outcome-card">
+                    <div class="outcome-icon">🔗</div>
+                    <h3 class="outcome-title">Seamless Course Integration</h3>
+                    <p class="outcome-description">
+                        Labs are spliced directly into the course interface at the perfect moment.
+                        Learn a concept, then immediately practice it.
+                    </p>
+                </div>
+
+                <div class="outcome-card">
+                    <div class="outcome-icon">🎓</div>
+                    <h3 class="outcome-title">Build Confidence Fast</h3>
+                    <p class="outcome-description">
+                        Experiment safely in a sandbox environment. Make mistakes, break things,
+                        and learn without fear of affecting production networks.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         TIER 2: CURRICULUM SECTION
+         ============================================ -->
+    <section class="curriculum-section" id="curriculum">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Course Contents</div>
+                <h2 class="section-title">Comprehensive Curriculum Aligned with CCNA 200-301</h2>
+                <p class="section-description">
+                    26 skills, 185 videos, 85 hands-on labs covering everything you need to pass CCNA
+                </p>
+            </div>
+
+            <div class="curriculum-list">
+                <!-- Sample curriculum items - First 2 expanded by default -->
+                <div class="curriculum-item">
+                    <div class="curriculum-header">
+                        <div>
+                            <h4 class="curriculum-title">Skill 01: Network Fundamentals & Packet Tracer</h4>
+                        </div>
+                        <div class="curriculum-meta">
+                            <span>8 lessons</span>
+                            <span>2h 15m</span>
+                        </div>
+                    </div>
+                    <div class="curriculum-content">
+                        <p>Master the basics of networking and get hands-on with Cisco Packet Tracer. Learn how networks communicate, understand the OSI and TCP/IP models, and build your first network.</p>
+                        <ul class="curriculum-lessons">
+                            <li>Introduction to Networking Concepts</li>
+                            <li>Building Your First Network in Packet Tracer</li>
+                            <li>Understanding Network Topologies</li>
+                            <li>IP Addressing Fundamentals</li>
+                            <li>Lab: Configure Basic Network Connectivity</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="curriculum-item">
+                    <div class="curriculum-header">
+                        <div>
+                            <h4 class="curriculum-title">Skill 02: Switching & Wireless Equipment</h4>
+                        </div>
+                        <div class="curriculum-meta">
+                            <span>6 lessons</span>
+                            <span>1h 45m</span>
+                        </div>
+                    </div>
+                    <div class="curriculum-content">
+                        <p>Explore switches and wireless access points. Learn about switch interfaces, MAC address tables, and how wireless networks integrate into enterprise environments.</p>
+                        <ul class="curriculum-lessons">
+                            <li>Switch Hardware and Interfaces</li>
+                            <li>MAC Address Tables and Switch Operation</li>
+                            <li>Wireless Access Points and Controllers</li>
+                            <li>Lab: Basic Switch Configuration</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="curriculum-item">
+                    <div class="curriculum-header">
+                        <div>
+                            <h4 class="curriculum-title">Skill 03: Cables, Connectors & Fiber Optics</h4>
+                        </div>
+                        <div class="curriculum-meta">
+                            <span>5 lessons</span>
+                            <span>1h 20m</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="curriculum-item">
+                    <div class="curriculum-header">
+                        <div>
+                            <h4 class="curriculum-title">Skill 04: OSI vs. TCP/IP Models</h4>
+                        </div>
+                        <div class="curriculum-meta">
+                            <span>7 lessons</span>
+                            <span>2h 10m</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="curriculum-item">
+                    <div class="curriculum-header">
+                        <div>
+                            <h4 class="curriculum-title">Skill 05: Cisco IOS Configuration</h4>
+                        </div>
+                        <div class="curriculum-meta">
+                            <span>9 lessons</span>
+                            <span>2h 30m</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="curriculum-item">
+                    <div class="curriculum-header">
+                        <div>
+                            <h4 class="curriculum-title">Skills 06-26: Advanced Topics</h4>
+                        </div>
+                        <div class="curriculum-meta">
+                            <span>150+ lessons</span>
+                            <span>25+ hours</span>
+                        </div>
+                    </div>
+                    <div class="curriculum-content">
+                        <p><strong>Remaining skills include:</strong></p>
+                        <ul class="curriculum-lessons">
+                            <li>VLANs and Trunking</li>
+                            <li>Spanning Tree Protocol (STP)</li>
+                            <li>IP Address Design (IPv4/IPv6)</li>
+                            <li>Static & Dynamic Routing (OSPF, EIGRP)</li>
+                            <li>Access Control Lists (ACLs)</li>
+                            <li>Network Security</li>
+                            <li>Network Services (DHCP, DNS, NTP)</li>
+                            <li>Quality of Service (QoS)</li>
+                            <li>Wireless Networking</li>
+                            <li>Network Automation (Ansible, REST APIs)</li>
+                            <li>Troubleshooting Methodologies</li>
+                            <li>...and much more!</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         TIER 3: COMPARISON SECTION
+         ============================================ -->
+    <section class="comparison-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Why NetworkChuck?</div>
+                <h2 class="section-title">Compare NetworkChuck Academy to the Competition</h2>
+                <p class="section-description">
+                    See why thousands of students choose our CCNA course over alternatives
+                </p>
+            </div>
+
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th class="comparison-highlight">NetworkChuck</th>
+                            <th>Other Courses</th>
+                            <th>Free YouTube</th>
+                            <th>Boot Camps</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Real Cisco Lab Environment</td>
+                            <td class="comparison-highlight"><span class="checkmark">✓</span></td>
+                            <td><span class="xmark">✗</span></td>
+                            <td><span class="xmark">✗</span></td>
+                            <td><span class="checkmark">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td>Story-Based Learning</td>
+                            <td class="comparison-highlight"><span class="checkmark">✓</span></td>
+                            <td><span class="xmark">✗</span></td>
+                            <td><span class="xmark">✗</span></td>
+                            <td><span class="xmark">✗</span></td>
+                        </tr>
+                        <tr>
+                            <td>Lifetime Access</td>
+                            <td class="comparison-highlight"><span class="checkmark">✓</span></td>
+                            <td>Varies</td>
+                            <td><span class="checkmark">✓</span></td>
+                            <td><span class="xmark">✗</span></td>
+                        </tr>
+                        <tr>
+                            <td>Learn at Your Own Pace</td>
+                            <td class="comparison-highlight"><span class="checkmark">✓</span></td>
+                            <td><span class="checkmark">✓</span></td>
+                            <td><span class="checkmark">✓</span></td>
+                            <td><span class="xmark">✗</span></td>
+                        </tr>
+                        <tr>
+                            <td>Structured Curriculum</td>
+                            <td class="comparison-highlight"><span class="checkmark">✓</span></td>
+                            <td><span class="checkmark">✓</span></td>
+                            <td><span class="xmark">✗</span></td>
+                            <td><span class="checkmark">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td>Price</td>
+                            <td class="comparison-highlight">$250</td>
+                            <td>$50-$500</td>
+                            <td>Free</td>
+                            <td>$2,000-$5,000</td>
+                        </tr>
+                        <tr>
+                            <td>Money-Back Guarantee</td>
+                            <td class="comparison-highlight"><span class="checkmark">✓</span> 30 days</td>
+                            <td>Varies</td>
+                            <td>N/A</td>
+                            <td>Rarely</td>
+                        </tr>
+                        <tr>
+                            <td>Expert Instructor (25+ yrs)</td>
+                            <td class="comparison-highlight"><span class="checkmark">✓</span></td>
+                            <td>Varies</td>
+                            <td>Varies</td>
+                            <td><span class="checkmark">✓</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         TIER 3: FAQ SECTION
+         ============================================ -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Frequently Asked Questions</div>
+                <h2 class="section-title">Got Questions? We've Got Answers</h2>
+            </div>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Is this course suitable for complete beginners?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Absolutely! While CCNA is an associate-level certification, this course starts
+                            with the fundamentals and builds up progressively. Jeremy explains concepts in
+                            plain English and the Castle Ryzen Coffee storyline makes complex topics approachable.
+                            If you're willing to put in the time and effort, this course will take you from
+                            zero to CCNA-ready.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What if I fail the CCNA exam?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            While we can't guarantee you'll pass (that depends on your study habits and effort),
+                            we provide everything you need to succeed: 185 videos, 85 hands-on labs, and
+                            comprehensive coverage of all CCNA exam objectives. Plus, you have lifetime access
+                            to the course, so you can review material as many times as needed. Our 30-day
+                            money-back guarantee also means you can try the course risk-free.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How long does it take to complete this course?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            The course contains 34 hours of video content plus 85 hands-on labs. Most students
+                            complete the course in 8-12 weeks studying 10-15 hours per week. However, since you
+                            have lifetime access, you can go at your own pace. Some students finish faster by
+                            dedicating more time, while others take a few months to fully absorb the material.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do I get lifetime access?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Yes! Your one-time payment of $250 gives you unlimited lifetime access to the course,
+                            including all future updates. As Cisco releases new exam versions or we add new content,
+                            you'll get those updates at no additional cost.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What's included in the $250 price?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Everything you need to pass CCNA: 185 video lessons covering 26 skills, 85 hands-on
+                            labs with real Cisco equipment, access to our virtual lab environment, the study
+                            planner tool, course downloads, and lifetime access to all future updates. The only
+                            thing not included is the actual CCNA exam voucher from Cisco (which costs $300
+                            separately).
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I get a refund if I'm not satisfied?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Yes! We offer a 30-day money-back guarantee. If you're not satisfied with the course
+                            for any reason within the first 30 days, simply contact us at hello@networkchuck.com
+                            and we'll issue a full refund—no questions asked.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do I need to buy expensive Cisco equipment?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            No! All 85 labs use our cloud-based virtual lab environment with genuine Cisco IOS
+                            software. You don't need to purchase any routers, switches, or other hardware.
+                            Everything runs in your browser, so you can practice from any computer with an
+                            internet connection.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How is this different from NetworkChuck's free YouTube content?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            While NetworkChuck's YouTube channel offers great introductory content, this course
+                            is a comprehensive, structured learning path specifically designed to prepare you for
+                            CCNA certification. It includes 85 hands-on labs with real Cisco equipment (not
+                            available on YouTube), follows the complete CCNA exam blueprint, includes a study
+                            planner, and uses the engaging Castle Ryzen Coffee storyline to connect concepts.
+                            Think of YouTube as free samples—this is the full meal.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FINAL CTA SECTION
+         ============================================ -->
+    <section class="cta-section" id="enroll">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Master CCNA and Transform Your Career?</h2>
+                <p>
+                    Join 15,000+ students who are building real-world networking skills with
+                    NetworkChuck Academy. 30-day money-back guarantee.
+                </p>
+                <a href="https://academy.networkchuck.com/course/cisco-ccna" class="btn btn-primary btn-large">
+                    Enroll Now for $250
+                </a>
+                <p style="margin-top: 1rem; font-size: 0.875rem; opacity: 0.8;">
+                    🔥 Limited time: Save $99 off regular price
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>Featured Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://academy.networkchuck.com/">Home</a></li>
+                        <li><a href="https://store.networkchuck.com/">Shop</a></li>
+                        <li><a href="https://academy.networkchuck.com/pages/about-us">About Us</a></li>
+                        <li><a href="https://academy.networkchuck.com/courses">All Courses</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:hello@networkchuck.com">Contact Us</a></li>
+                        <li><a href="https://academy.networkchuck.com/pages/terms">Terms & Conditions</a></li>
+                        <li><a href="https://academy.networkchuck.com/pages/privacy">Privacy Policy</a></li>
+                        <li><a href="https://academy.networkchuck.com/pages/refund-policy">Refund Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Connect With Us</h4>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon" aria-label="Facebook">📘</a>
+                        <a href="https://x.com/the_ncacademy" class="social-icon" aria-label="Twitter">🐦</a>
+                        <a href="#" class="social-icon" aria-label="YouTube">📺</a>
+                        <a href="#" class="social-icon" aria-label="LinkedIn">💼</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 NetworkChuck Academy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================
+         JAVASCRIPT
+         ============================================ -->
+    <script>
+        // Sticky CTA Bar - appears after scrolling past hero
+        window.addEventListener('scroll', function() {
+            const stickyCta = document.getElementById('stickyCta');
+            const heroHeight = document.querySelector('.hero').offsetHeight;
+
+            if (window.scrollY > heroHeight) {
+                stickyCta.classList.add('visible');
+            } else {
+                stickyCta.classList.remove('visible');
+            }
+        });
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const faqItem = this.parentElement;
+                const wasActive = faqItem.classList.contains('active');
+
+                // Close all other FAQs
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+
+                // Toggle current FAQ
+                if (!wasActive) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+
+        // Curriculum Accordion (optional - if you want collapsible sections)
+        document.querySelectorAll('.curriculum-header').forEach(header => {
+            header.addEventListener('click', function() {
+                const item = this.parentElement;
+                const content = item.querySelector('.curriculum-content');
+
+                if (content) {
+                    const isVisible = content.style.display === 'block';
+                    content.style.display = isVisible ? 'none' : 'block';
+                }
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Initialize - show first 2 curriculum items by default
+        document.addEventListener('DOMContentLoaded', function() {
+            const firstTwo = document.querySelectorAll('.curriculum-item .curriculum-content');
+            if (firstTwo.length >= 2) {
+                firstTwo[0].style.display = 'block';
+                firstTwo[1].style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
