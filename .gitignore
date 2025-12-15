@@ -1,0 +1,9 @@
+# Competitor HTML files (kept locally for reference)
+*.html
+!updated_NetworkChuck_Landing_Page.html
+
+# macOS files
+.DS_Store
+
+# Other reference files
+email_to_learnworlds_community_guide.txt
